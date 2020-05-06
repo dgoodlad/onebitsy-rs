@@ -8,7 +8,7 @@ keywords = ["arm", "cortex-m", "stm32", "1bitsy"]
 license = "MIT"
 readme = "README.md"
 name = "onebitsy"
-version = "0.1.2"
+version = "0.1.3"
 repository = "https://github.com/dgoodlad/onebitsy-rs"
 exclude = [
     ".vscode/*",
@@ -16,6 +16,7 @@ exclude = [
 
 [package.metadata.docs.rs]
 targets = ["thumbv7em-none-eabihf"]
+rustdoc-args = ["--cfg", "docsrs"]
 
 [dependencies]
 embedded-hal = "0.2.3"
