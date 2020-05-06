@@ -20,8 +20,8 @@ features = ["stm32f415", "rt"]
 [dev-dependencies]
 cortex-m = "0.6.2"
 cortex-m-rt = "0.6.12"
-cortex-m-semihosting = "0.3.3"
-panic-semihosting = "0.2.0"
+# cortex-m-semihosting = "0.3.3"
+# panic-semihosting = "0.2.0"
 
 [features]
 rt = ["stm32f4xx-hal/rt"]

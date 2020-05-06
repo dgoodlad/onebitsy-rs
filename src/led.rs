@@ -5,16 +5,16 @@ use crate::hal::prelude::*;
 pub type LED = PA8<Output<PushPull>>;
 
 pub trait Led {
-    fn off(self);
-    fn on(self);
+    fn off(&mut self);
+    fn on(&mut self);
 }
 
 impl Led for LED {
-    fn off(self) {
+    fn off(&mut self) {
         self.set_high().unwrap();
     }
 
-    fn on(self) {
+    fn on(&mut self) {
         self.set_low().unwrap();
     }
 }
