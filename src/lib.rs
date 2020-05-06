@@ -2,6 +2,39 @@
 //!
 //! # Usage
 //!
+//! ```
+//! use onebitsy::{self, stm32, Led, Button};
+//! use cortex_m_rt::{entry, exception};
+//!
+//! #![entry]
+//! fn main() -> ! {
+//!   if let (Some(dp), Some(_cp)) = (
+//!       stm32::Peripherals::take(),
+//!       cortex_m::peripheral::Peripherals::take(),
+//!   ) {
+//!       let _clocks = onebitsy::configure_clocks(dp.RCC.constrain());
+//!
+//!       let pins = onebitsy::Pins::new(
+//!           dp.GPIOA.split(),
+//!           dp.GPIOB.split(),
+//!           dp.GPIOC.split(),
+//!           dp.GPIOD.split(),
+//!       );
+//!       let mut led = onebitsy::led(pins.pa8);
+//!       let button = onebitsy::button(pins.pc1);
+//!
+//!       loop {
+//!           if button.is_pressed() {
+//!               led.on();
+//!           } else {
+//!               led.off();
+//!           }
+//!       }
+//!   }
+//!
+//!   loop {}
+//! }
+//! ```
 
 #![deny(warnings)]
 #![no_std]
