@@ -8,7 +8,7 @@ keywords = ["arm", "cortex-m", "stm32", "1bitsy"]
 license = "MIT"
 readme = "README.md"
 name = "onebitsy"
-version = "0.1.1"
+version = "0.1.2"
 repository = "https://github.com/dgoodlad/onebitsy-rs"
 exclude = [
     ".vscode/*",
