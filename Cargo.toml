@@ -9,6 +9,9 @@ readme = "README.md"
 name = "onebitsy"
 version = "0.1.0"
 repository = "https://github.com/dgoodlad/onebitsy-rs"
+exclude = [
+    ".vscode/*",
+]
 
 [dependencies]
 embedded-hal = "0.2.3"
