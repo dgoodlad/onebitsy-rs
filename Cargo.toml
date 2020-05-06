@@ -8,7 +8,7 @@ license = "MIT"
 readme = "README.md"
 name = "onebitsy"
 version = "0.1.0"
-repository = "https://github.com/dgoodlad/onebitsy"
+repository = "https://github.com/dgoodlad/onebitsy-rs"
 
 [dependencies]
 embedded-hal = "0.2.3"
@@ -20,8 +20,6 @@ features = ["stm32f415", "rt"]
 [dev-dependencies]
 cortex-m = "0.6.2"
 cortex-m-rt = "0.6.12"
-# cortex-m-semihosting = "0.3.3"
-# panic-semihosting = "0.2.0"
 
 [features]
 rt = ["stm32f4xx-hal/rt"]
