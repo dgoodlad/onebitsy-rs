@@ -1,5 +1,8 @@
 # 1bitsy Board Support Crate
 
+[![Crates.io](https://img.shields.io/crates/v/onebitsy.svg)](https://crates.io/crates/onebitsy)
+[![API docs](https://docs.rs/onebitsy/badge.svg)](https://docs.rs/onebitsy)
+
 *This crate is relatively untested*
 
 It wraps up and makes more obvious how to use:
