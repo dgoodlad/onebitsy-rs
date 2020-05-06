@@ -2,6 +2,7 @@
 authors = ["David Goodlad <david@goodlad.net>"]
 categories = ["embedded", "hardware-support", "no-std"]
 description = "Board Support Crate for the 1Bitsy development board"
+documentation = "https://docs.rs/onebitsy"
 edition = "2018"
 keywords = ["arm", "cortex-m", "stm32", "1bitsy"]
 license = "MIT"
