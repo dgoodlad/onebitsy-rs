@@ -8,7 +8,7 @@ keywords = ["arm", "cortex-m", "stm32", "1bitsy"]
 license = "MIT"
 readme = "README.md"
 name = "onebitsy"
-version = "0.1.3"
+version = "0.2.0"
 repository = "https://github.com/dgoodlad/onebitsy-rs"
 exclude = [
     ".vscode/*",
@@ -20,17 +20,16 @@ rustdoc-args = ["--cfg", "docsrs"]
 
 [dependencies]
 embedded-hal = "0.2.3"
-
-[dependencies.stm32f4xx-hal]
-version = "0.8.0"
-features = ["stm32f415", "rt"]
-
-[dev-dependencies]
 cortex-m = "0.6.2"
 cortex-m-rt = "0.6.12"
 
-[features]
-rt = ["stm32f4xx-hal/rt"]
+[dependencies.stm32f4xx-hal]
+default-features = false
+features = ["stm32f415", "rt"]
+version = "0.8"
+
+[dev-dependencies]
+panic-halt = "0.2.0"
 
 [profile.release]
 codegen-units = 1 # better optimizations
